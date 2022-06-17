@@ -40,7 +40,7 @@ namespace InterfaceExercise
 
             //Now, create objects of your 3 classes and give their members values;
             //Creatively display and organize their values
-
+            List<IVehicle> vehicles = new List<IVehicle>();
 
             var ferrari = new Car
             {
@@ -78,7 +78,21 @@ namespace InterfaceExercise
                 IsElectric = false
             };
 
-            
+
+            vehicles.Add(ram);
+            vehicles.Add(ferrari);
+            vehicles.Add(escalade);
+
+            foreach (IVehicle vehicle in vehicles)
+            {
+                Console.WriteLine($"Vehicle Stats:\n" +
+                $"Wheels: {vehicle.Wheels}\n" +
+                $"Doors: {vehicle.Doors}\n" +
+                $"Color: {vehicle.Color}\n" +
+                $"Electric? {vehicle.IsElectric}\n");
+            }
+
+            Console.ReadLine();
             
         }
     }

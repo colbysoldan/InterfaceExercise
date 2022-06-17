@@ -16,6 +16,9 @@ namespace InterfaceExercise
         public int Doors { get; set; }
         public string Color { get; set; }
         public bool IsElectric { get; set; }
+
+       
+        
     }
 }
 
